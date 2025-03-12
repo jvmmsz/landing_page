@@ -24,12 +24,16 @@ a {
 
 img {
     max-width: 100%;   /* Evita o overflow, a img ocupa 100% do elemento pai */  
+    display: block; /* Faz com o que a imagem se comporte sempre como um bloco, ou seja do início ao fim do container.*/
 }
 
 li {
     list-style: none; /*  */ 
 }
 
+p, h1,h2,h3 {
+    margin: 0px;
+}
 
 /* 
 =======================
@@ -94,10 +98,40 @@ Estilização do Conteúdo
     border-radius: 4px;
 }
 
-.rodape {
+
+
+/* 
+=======================
+Estilização das Vantagens 
+=======================
+*/
+
+.vantagens {
     background-color: #ffffff;
     padding: 40px;
-    text-align: center;
-    width: 100%; /* Faz com que o elemento atual fique 100% do tamanho do elemento pai (Você não está utilizando display)*/
 }
 
+.vantagens-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    padding: 20px;
+}
+
+.vantagens-item p {
+    grid-column: 2;
+}
+
+/* 
+=======================
+Estilização do Rodapé
+=======================
+*/
+
+.rodape {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%; /* Faz com que o elemento atual fique 100% do tamanho do elemento pai (Você não está utilizando display)*/
+    box-sizing: border-box;
+}
